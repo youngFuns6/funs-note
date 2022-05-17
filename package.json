@@ -2,8 +2,7 @@
   "name": "funs-note",
   "version": "0.1.0",
   "private": true,
-  "main": "main.ts",
-  "type": "module",
+  "main": "build/main/main.js",
   "build": {
     "productName": "YDD",
     "appId": "com.electron.youdiandian",
@@ -52,7 +51,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-start": "cross-env NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
+    "electron-start": "cross-env NODE_ENV=development yarn build && electron .",
     "electron-build": "cross-env NODE_ENV=production yarn build && electron-builder build",
     "electron-build-win": "cross-env NODE_ENV=production yarn build && electron-builder --win --ia32"
   },
